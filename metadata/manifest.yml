@@ -2,13 +2,13 @@ Name: neo4j
 Cartridge-Short-Name: NEO4J
 Display-Name: NEO4J
 Description: "Neo4j is an open-source, high-performance, enterprise-grade NOSQL graph database."
-Version: '2.3'
+Version: '3.0'
 License: GNU GENERAL PUBLIC LICENSE
 License-Url: 
-Vendor: Shekhar Gulati
+Vendor: Graceful Gopher
 Cartridge-Version: 0.0.1
 Cartridge-Vendor: neo4j
-Source-Url: https://github.com/jelastic-public-cartridges/openshift-origin-cartridge-neo4j-v21.git
+Source-Url: https://github.com/gracefulgopher/openshift-origin-cartridge-neo4j-v21.git
 Categories:
   - service
   - database
@@ -42,7 +42,7 @@ Cart-Data:
     Type: environment
     Description: "Unique ID which identified the gear. This value changes between gears."
 Provides:
-  - neo4j-2.1
+  - neo4j-3.0
   - "neo4j"
 Scaling:
   Min: 1
@@ -50,10 +50,10 @@ Scaling:
 Endpoints:
   - Private-IP-Name:   DB_HOST
     Private-Port-Name: DB_PORT
-    Private-Port:      1337
+    Private-Port:      17474
   - Private-IP-Name:   DB_HOST_WEB
     Private-Port-Name: DB_PORT_WEB
-    Private-Port:      8080  
+    Private-Port:      17475
     Public-Port-Name:  DB_PROXY_PORT
 Publishes:
   publish-db-connection-info:

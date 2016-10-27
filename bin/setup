@@ -1,7 +1,5 @@
 #!/bin/bash -e
 
-. /etc/jelastic/environment
-
 set -u
 
 for dir in logs tmp pid cache dbs env; do
