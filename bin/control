@@ -8,8 +8,6 @@ STOPTIMEOUT=10
 FMT="%a %b %d %Y %H:%M:%S GMT%z (%Z)"
 PID=${OPENSHIFT_NEO4J_DIR}/versions/$Version/neo4j-${Version}/run/neo4j.pid
 
-NEO4J_CLI="-host $OPENSHIFT_NEO4J_DB_HOST -port $OPENSHIFT_NEO4J_DB_PORT"
-
 function is_running() {
     if [ -f $PID ]; then
         local neo4j_pid=`cat ${OPENSHIFT_NEO4J_DIR}/versions/$Version/neo4j-${Version}/run/neo4j.pid`;
@@ -34,7 +32,7 @@ function start() {
         exit 0
     fi
 
-    ${NEO4J_BIN_DIR}/neo4j start -host $OPENSHIFT_NEO4J_DB_HOST -port $OPENSHIFT_NEO4J_DB_PORT
+    ${NEO4J_BIN_DIR}/neo4j start
 
     ret=$?
     if [ $ret -ne 0 ]; then

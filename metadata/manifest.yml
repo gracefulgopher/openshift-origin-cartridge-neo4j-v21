@@ -51,10 +51,11 @@ Endpoints:
   - Private-IP-Name:   DB_HOST
     Private-Port-Name: DB_PORT
     Private-Port:      17474
+    Public-Port-Name:  DB_PROXY_PORT
   - Private-IP-Name:   DB_HOST_WEB
     Private-Port-Name: DB_PORT_WEB
     Private-Port:      17475
-    Public-Port-Name:  DB_PROXY_PORT
+    Public-Port-Name:  DB_WEB_PROXY_PORT
 Publishes:
   publish-db-connection-info:
     Type: "ENV:NET_TCP:db:connection-info"
